@@ -6,7 +6,6 @@ import AboutUs from './Pages/AboutUs'
 import NotFound from './Pages/NotFound'
 import SignUp from './Pages/SIgnUp'
 import Login from './Pages/Login'
-import CourseList from "./Pages/Course/CourseList";
 import Contact from "./Pages/Contact";
 import Denied from "./Pages/Denied";
 import CourseDescription from "./Pages/Course/CourseDescription";
@@ -14,6 +13,7 @@ import RequireAuth from "./Components/Auth/RequireAuth";
 import CreateCourse from "./Pages/Course/createCourse";
 import Profile from "./Pages/User/Profile";
 import EditProfile from "./Pages/User/EditProfile";
+import CourseList from "./Pages/Course/courseList";
 
 function App() {
 
