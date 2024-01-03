@@ -25,7 +25,7 @@ const initialState= {
     })
     export const login= createAsyncThunk('/auth/login', async (data)=> {
         try {
-            const res=axiosInstance.post('user/login', data)
+            const res=axiosInstance.post('/user/login', data)
             toast.promise(res, {
                 loading: 'Wait! authentication is in progress...',
                 success: (data)=>{
@@ -40,7 +40,7 @@ const initialState= {
     })
     export const logout= createAsyncThunk('/auth/logout', async (data)=> {
         try {
-            const res=axiosInstance.get('user/logout')
+            const res=axiosInstance.get('/user/logout')
             toast.promise(res, {
                 loading: 'Wait! logout is in progress...',
                 success: (data)=>{
@@ -55,7 +55,7 @@ const initialState= {
     })
     export const updatedProfile=  createAsyncThunk("/user/update/profile", async(data)=>{
         try {
-            const res= axiosInstance.put(`user/update/${data[0]}`, data[1]);
+            const res= axiosInstance.put(`/user/update/${data[0]}`, data[1]);
             toast.promise(res, {
                 loading: 'Wait! profile update in progress',
                 success: (data)=>{
@@ -70,7 +70,7 @@ const initialState= {
     })
     export const getUserData=  createAsyncThunk("/user/details", async()=>{
         try {
-            const res= axiosInstance.get('user/me');
+            const res= axiosInstance.get('/user/me');
             return (await res).data;
         } catch (error) {
             toast.error(error?.response?.data?.message)
@@ -82,10 +82,10 @@ const authSlice= createSlice({
     reducers: {},
     extraReducers: (builder)=>{
         builder
-            .addCase(login.fulfilled, (state, action)=>{
-            localStorage.setItem('data', JSON.stringify(action?.payload?.user))
+        .addCase(login.fulfilled, (state, action)=>{
             localStorage.setItem('isLoggedIn', true)
             localStorage.setItem('role', action?.payload?.user?.role)
+            localStorage.setItem('data', JSON.stringify(action?.payload?.user))
             state.isLoggedIn= true;
             state.data=action?.payload?.user;
             state.role= action?.payload?.user?.role;

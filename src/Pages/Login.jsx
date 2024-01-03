@@ -34,7 +34,6 @@ function  Login() {
             setLoginData({
                 email: '',
                 password: "",
-
             });
 
     }
@@ -53,6 +52,7 @@ function  Login() {
                     name="email"
                     id="email"
                     placeholder="Enter your email.."
+                    autoComplete="on"
                     className="bg-transparent px-2 py-1 border"
                     onChange={handleUserInput}
                     value={loginData.email}

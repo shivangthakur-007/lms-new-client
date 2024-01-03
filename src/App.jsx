@@ -19,7 +19,7 @@ function App() {
 
   
   return (
-    <>
+    <div>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/about" element={<AboutUs />}></Route>
@@ -43,7 +43,7 @@ function App() {
 
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
-    </>
+    </div>
   );
 
 
