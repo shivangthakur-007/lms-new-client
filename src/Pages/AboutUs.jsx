@@ -1,6 +1,6 @@
 import CarouselSlide from "../Components/Carousel";
-import { Celebrities } from "../Constants/CelebrityData";
 import HomeLayouts from "../Layouts/HomeLayouts";
+import Celebrities from "../Constants/CelebrityData.js"
 import AboutMainImage from "../assets/Images/aboutMainImage.png";
 
 function AboutUs() {
@@ -23,11 +23,10 @@ function AboutUs() {
           <div className="w-1/2">
             <img id="test1" style={{filter: "drop-shadow(0px 10px 10px rgb(0,0,0));"}} className="drop-shadow-2xl"
               src={AboutMainImage}
-              alt=""
+              alt="hello"
             />
           </div>
         </div>
-
         <div className="carousel w-1/2 m-auto my-16">
           {Celebrities &&
             Celebrities.map((Celebrities) => (

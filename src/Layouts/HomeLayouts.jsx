@@ -1,8 +1,8 @@
 import { FiMenu } from "react-icons/fi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import Footer from "../Components/Footer";
 import { useDispatch, useSelector } from "react-redux";
+import Footer from "../Components/Footer";
 import { logout } from "../Redux/Slice/AuthSlice";
 
 function HomeLayouts({ children }) {
@@ -51,7 +51,7 @@ function HomeLayouts({ children }) {
           <ul className="menu p-4 w-48 h-[100%] sm:w-80 bg-base-200 text-base-content relative">
             <li className="w-fit absolute right-2 z-50">
               <button onClick={hideDrawer}>
-                <AiFillCloseCircle size={"24"} />
+                <AiFillCloseCircle size={24} />
               </button>
             </li>
             <li>
