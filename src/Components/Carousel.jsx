@@ -4,7 +4,8 @@ function CarouselSlide({
   Description,
   slidenumber,
   totalSlides,
-}) {
+}) 
+{
   return (
     <div id={`slide${slidenumber}`} className="carousel-item relative w-full">
       <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
@@ -20,9 +21,9 @@ function CarouselSlide({
             className="btn btn-circle"
           >
             ❮
-          </a>  
+          </a>
           <a
-            href={`#slide${(slidenumber) % totalSlides + 1}`}
+            href={`#slide${((slidenumber) % totalSlides) + 1}`}
             className="btn btn-circle"
           >
             ❯

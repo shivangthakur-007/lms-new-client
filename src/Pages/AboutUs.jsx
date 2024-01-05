@@ -1,6 +1,6 @@
 import CarouselSlide from "../Components/Carousel";
 import HomeLayouts from "../Layouts/HomeLayouts";
-import Celebrities from "../Constants/CelebrityData.js"
+import { Celebrities } from "../Constants/CelebrityData.js";
 import AboutMainImage from "../assets/Images/aboutMainImage.png";
 
 function AboutUs() {
@@ -21,7 +21,10 @@ function AboutUs() {
           </section>
 
           <div className="w-1/2">
-            <img id="test1" style={{filter: "drop-shadow(0px 10px 10px rgb(0,0,0));"}} className="drop-shadow-2xl"
+            <img
+              id="test1"
+              style={{ filter: "drop-shadow(0px 10px 10px rgb(0,0,0))" }}
+              className="drop-shadow-2xl"
               src={AboutMainImage}
               alt="hello"
             />
@@ -32,8 +35,8 @@ function AboutUs() {
             Celebrities.map((Celebrities) => (
               <CarouselSlide
                 {...Celebrities}
-                key={Celebrities.slidenumber}
-                totalSlides={Celebrities.length}
+                key={Celebrities.slidenumber} 
+                totalSlides={5}
               />
             ))}
         </div>

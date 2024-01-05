@@ -1,10 +1,10 @@
-import Nelson from "../assets/Images/nelsonMandela.png";
 import apj from "../assets/Images/apj.png";
 import billGate from "../assets/Images/billGates.png";
 import einstein from "../assets/Images/einstein.png";
 import stevejob from "../assets/Images/steveJobs.png";
+import Nelson from "../assets/Images/nelsonMandela.png";
 
-const Celebrities = [
+export const Celebrities = [
   {
     title: "Nelson Mandela",
     Description:
@@ -41,4 +41,4 @@ const Celebrities = [
   },
 ];
 
-export default Celebrities;
+// export default Celebrities;
